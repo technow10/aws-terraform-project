@@ -6,8 +6,8 @@ resource "aws_subnet" "public_subnet_az1" {
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
 
-  tags      = {
-    Name    = "public subnet AZ1"
+  tags = {
+    Name = "public subnet AZ1"
   }
 }
 
@@ -19,8 +19,8 @@ resource "aws_subnet" "public_subnet_az2" {
   availability_zone       = "us-east-1b"
   map_public_ip_on_launch = true
 
-  tags      = {
-    Name    = "public subnet AZ2"
+  tags = {
+    Name = "public subnet AZ2"
   }
 }
 

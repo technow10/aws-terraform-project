@@ -4,7 +4,7 @@
 resource "aws_eip" "eip_for_nat_gateway_az1" {
   domain = "vpc"
 
-  tags   = {
+  tags = {
     Name = "elastic ip for nat-gw public AZ1"
   }
 }
@@ -14,7 +14,7 @@ resource "aws_eip" "eip_for_nat_gateway_az1" {
 resource "aws_eip" "eip_for_nat_gateway_az2" {
   domain = "vpc"
 
-  tags   = {
+  tags = {
     Name = "elastic ip for nat-gw public AZ2"
   }
 }
@@ -25,7 +25,7 @@ resource "aws_nat_gateway" "nat_gateway_az1" {
   allocation_id = aws_eip.eip_for_nat_gateway_az1.id
   subnet_id     = aws_subnet.public_subnet_az1.id
 
-  tags   = {
+  tags = {
     Name = "create in the first public subnet AZ1"
   }
 
@@ -40,7 +40,7 @@ resource "aws_nat_gateway" "nat_gateway_az2" {
   allocation_id = aws_eip.eip_for_nat_gateway_az2.id
   subnet_id     = aws_subnet.public_subnet_az2.id
 
-  tags   = {
+  tags = {
     Name = "create in public subnet AZ2"
   }
 
