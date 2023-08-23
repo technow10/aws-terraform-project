@@ -48,9 +48,30 @@ variable "private_data_subnet_AZ2_cidr" {
   type        = string
 }
 
-# security group variable
-variable "ssh_location" {
-  default     = "0.0.0.0/0"
-  description = "yuor local computer IP adress"
+# Database snapshot identifyer
+variable "database_snapshot_identifier" {
+  default     = "arn:aws:rds:us-east-1:320267704417:snapshot:project-db-snapshot"
+  description = "database snapshot arn"
   type        = string
+}
+
+# database instance class 
+variable "database_instance_class" {
+  default     = "db.t2.micro"
+  description = "database instance class"
+  type        = string
+}
+
+# database instance identifier
+variable "database_instance_identifier" {
+  default     = "project-db"
+  description = "database instance identifier"
+  type        = string
+}
+
+# multi az deployment
+variable "multi_az_deployment" {
+  default     = false
+  description = "create a standby instance"
+  type        = bool
 }
