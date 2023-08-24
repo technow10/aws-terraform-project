@@ -75,3 +75,9 @@ variable "multi_az_deployment" {
   description = "create a standby instance"
   type        = bool
 }
+
+variable "sss_certificate_arn" {
+  default     = "arn:aws:acm:us-east-1:320267704417:certificate/5c10bc7f-4329-4c97-a15a-513decdbdb93"
+  description = "certificate manager"
+  type        = string
+}
